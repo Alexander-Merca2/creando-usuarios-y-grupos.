@@ -1,0 +1,16 @@
+# creando-usuarios-y-grupos.
+Paso1- iniciar la maquina virtual.
+Paso2- debe ingresar al root poniendo su usuario y contraseña
+Paso3- ahora para empezar a crear el usuario tenemos que ingresar el comando "useradd" mas el nombre que quisiera asignarle.
+Ejemplo: "Useradd alex"
+Paso4- luego al usuario que creamos tenemos que asignarle una contraseña.
+Para ello ingresamos el comando "passwd" mas el nombre que le habiamos asignado al usuario, ejemplo: "passwd alex" y listo ingresamos la contaseña que quisieramos asignarle
+Paso5- confirmar la contraseña, luego de crear el usuario y la contraseña, debemos confirmar la contraseña que le habiamos asignado al usuario creado y listo ya tendriamos el usurio.
+Paso6- para verificar la existencia de el usuario en el sistemas ingresamos en siguiente comando: "nano /etc/passwd"
+Paso7- para crear un grupo debemos ingresar el comando groupadd más el nombre que le asignaremos al grupo. Ejemplo "groupadd Familia"
+Paso8- para agregar un usuario tenemos que escribir el nombre del usuario mas el grupo que quisieramos asignar, ejemplo: "useradd alex groupadd familia"
+Paso9- luego de ello nos mostrara un un texto con el mensaje que indique que el usuario alex a sido agregado al grupo familia
+Paso10- para verificar que los usuarios se agregaron correctamente debemos ejecutar el comando getent group + el nombre del grupo que en este caso seria el grupo familia.
+Paso11- para cambiar en nombre a nuestro grupo tenemos que ingresar el comando "groupmode -n" + el nombre nuevo + el nombre del grupo. Ejemplo: "groupmode -n casa familia"
+Paso12- hacemos verificación del cambio con el comando "cat /etc/group" y podremos comprobar si el cambio se realizo correctamente
+Fin..
